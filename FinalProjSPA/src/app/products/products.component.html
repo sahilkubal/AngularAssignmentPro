@@ -1,0 +1,16 @@
+
+<div class="row mt-4 d-flex justify-content-evenly">
+    <div class="col-lg-3 mb-3" *ngFor="let product of products">
+        <div class="card" style="width: 18rem;">
+            <img [src]="product.images[0]" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.title|slice:0:20}}...</h5>
+                <p class="card-text">{{product.description|slice:0:50}}...</p>
+                <h6>Price: {{product.price| currency:"INR"}}</h6>
+                <a class="btn btn-primary ms-3" (click)="add_to_cart()">Add to cart</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary" [routerLink]="['/product-details', product.id]">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+

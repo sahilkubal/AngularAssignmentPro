@@ -1,0 +1,15 @@
+<div class="row mt-5 d-flex justify-content-evenly">
+    <div class="col-lg-4 me-5">
+        <img [src]="product.images[0]" height="400px" width="600px" alt="">
+    </div>
+    <div class="col-lg-4">
+        <h1>{{product.title}}</h1>
+        <p>{{product.description}}</p>
+        <h3>Price: {{product.price|currency:'INR'}}</h3>
+
+        <a [routerLink]="['/products',product.id]" class="btn btn-primary" (click)="add_to_cart()">Add to
+            cart</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-primary">Buy Nowt</a>
+    </div>
+</div>
+<hr>
